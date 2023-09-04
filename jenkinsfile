@@ -28,6 +28,7 @@ pipeline {
         }
         stage('Run') {
             steps {
+                sh "cd gameoflife-web directory"
                 sh "mvn jetty:run"
             }
         }
