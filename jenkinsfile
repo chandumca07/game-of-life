@@ -26,5 +26,10 @@ pipeline {
                 junit testResults: '**/surefire-reports/TEST-*.xml'
             }
         }
+        stage('Run') {
+            steps {
+                sh "mvn jetty:run"
+            }
+        }
     }
 }
